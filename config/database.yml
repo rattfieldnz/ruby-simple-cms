@@ -14,7 +14,7 @@ default: &default
   encoding: utf8
   pool: 5
   username: root
-  password:
+  password: vagrant
   socket: /var/run/mysqld/mysqld.sock
 
 development:
@@ -50,5 +50,5 @@ test:
 production:
   <<: *default
   database: simple_cms_production
-  username: simple_cms
-  password: <%= ENV['SIMPLE_CMS_DATABASE_PASSWORD'] %>
+  username: root
+  password: vagrant
